@@ -28,6 +28,7 @@ jobs:
             curl -fsSL --retry 3 --retry-delay 5 -G "https://gh.crafter.run/$HANDLE" \
               --data-urlencode "theme=$theme" \
               --data-urlencode "cols=$COLS" \
+              --data-urlencode "bg=keep" \
               --data-urlencode "image=$IMAGE" \
               -o "$theme.tmp"
             grep -q "<svg" "$theme.tmp"
